@@ -1,0 +1,5 @@
+const PREFIX = 'Log/';
+
+export const GET_LOGS_REQUEST = `${PREFIX}GET_LOGS_REQUEST`;
+export const GET_LOGS_SUCCESS = `${PREFIX}GET_LOGS_SUCCESS`;
+export const GET_LOGS_ERROR = `${PREFIX}GET_LOGS_ERROR`;

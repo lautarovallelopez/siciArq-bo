@@ -1,0 +1,27 @@
+import assignmentsPropTypes from './assignments';
+import fieldMaterialsPropTypes from './fieldMaterials';
+import childrenPropTypes from './childrenPropTypes';
+import fontAwesomeIconPropTypes from './fontAwesomeIconPropTypes';
+import userPropTypes from './userPropTypes';
+import assignmentsTypesProptypes from './assignmentsTypes';
+import addressPropTypes from './addressPropTypes';
+import logsPropTypes from './logs';
+import situationPropTypes from './situationPropTypes';
+import dwellingPropTypes from './dwelling';
+import householdPropTypes from './household';
+import visitPropTypes from './visit';
+import surveyPropTypes from './survey';
+
+export {assignmentsPropTypes};
+export {childrenPropTypes};
+export {fieldMaterialsPropTypes};
+export {fontAwesomeIconPropTypes};
+export {userPropTypes};
+export {assignmentsTypesProptypes};
+export {addressPropTypes};
+export {logsPropTypes};
+export {situationPropTypes};
+export {dwellingPropTypes};
+export {householdPropTypes};
+export {visitPropTypes};
+export {surveyPropTypes};

@@ -1,0 +1,29 @@
+footer {
+  width: 100%;
+  min-height: 50px;
+  padding: 3px;
+  background-color: $primary;
+  img {
+    padding-bottom: 5px;
+  }
+  div.row > div {
+    margin-top: 7px;
+    color: $primary-color-light;
+  }
+  .txt-footer {
+    font-size: 12px;
+  }
+  .version {
+    font-size: 10px;
+  }
+  .texts, .version {
+    color: $white-color;
+  }
+  a {
+    color: $accent-color;
+    &:hover {
+      color: $white-color;
+      text-decoration: underline;
+    }
+  }
+}

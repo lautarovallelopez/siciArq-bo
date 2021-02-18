@@ -1,0 +1,37 @@
+.btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  border-radius: 6px;
+  &:focus, &.focus, &:active:focus, &:active.focus {
+    outline: none;
+  }
+  &:disabled {
+    border-width: 2px !important;
+    border-radius: inherit;
+    opacity: .4 !important;
+  }
+}
+
+.btn-info {
+  color: $black;
+  background-color: $white;
+  border-color: #7f7f7f;
+  &:hover {
+    background-color: #f1f1f1;
+    border-color: #7f7f7f;
+  }
+}
+
+.btn-primary {
+  border: transparent;
+  &:disabled {
+    color: $grey;
+    background-color: $white !important;
+    border-width: .5px !important;
+    border-top: 0;
+    border-right: 0;
+    border-radius: inherit;
+    opacity: .4 !important;
+  }
+}

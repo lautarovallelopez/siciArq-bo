@@ -1,0 +1,61 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+$blue:              #008179 !default;
+$red:               #aa2236 !default;
+$yellow:            rgba(255, 193, 7, 0.6) !default;
+$teal:              #20c997 !default;
+$white:             #fff !default;
+$black:             #000 !default;
+$black-secondary:   #32344a !default;
+$grey:              #444 !default;
+$text-color:        #3e586d !default;
+$grey-ccc:          #ccc;
+
+$primary-color:         $blue;
+$primary-color-dark:    #2a2a2a;
+$primary-color-light: #d6e8e8;
+$primary-color-text:    #2a2a2a;
+$accent-color:          $red;
+$header-color-table:    #555;
+$white-color:           #fff;
+$white-color-2:         #f1f1f1;
+$white-color-3:         #f0eded;
+$light-blue-color:      #219c97;
+
+.w-40 {
+  width: 40%;
+}
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "primary":    $blue,
+    "secondary":  $text-color,
+    "danger":     $red,
+    "info":       $teal,
+    "warning":    $yellow
+  ),
+    $theme-colors
+);
+
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/helvetica-neue.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bebas";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/bebas.ttf") format("tff");
+}

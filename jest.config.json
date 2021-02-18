@@ -1,0 +1,40 @@
+{
+    "verbose": true,
+    "clearMocks": true,
+    "moduleFileExtensions": [
+        "js",
+        "jsx"
+    ],
+    "moduleDirectories": [
+        "node_modules",
+        "src"
+    ],
+    "transformIgnorePatterns": [
+        "node_modules/(?!(@indec)/)"
+    ],
+    "moduleNameMapper": {
+        "^@root(.*)$": "<rootDir>$1",
+        "^@components(.*)$": "<rootDir>/src/components$1",
+        "^@config(.*)$": "<rootDir>/src/config$1",
+        "^@hooks(.*)$": "<rootDir>/src/hooks$1",
+        "^@services(.*)$": "<rootDir>/src/services$1",
+        "^@constants(.*)$": "<rootDir>/src/constants$1",
+        "^@model(.*)$": "<rootDir>/src/model$1",
+        "^@util(.*)$": "<rootDir>/src/util$1",
+        "^@state(.*)$": "<rootDir>/src/state$1"
+    },
+    "transform": {
+        "^.+\\.js$": "babel-jest",
+        ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "setupFiles": [
+        "<rootDir>/jest.setup.js"
+    ],
+    "setupFilesAfterEnv": [
+        "<rootDir>/jest.setup-after-env.js"
+    ],
+    "watchPlugins": [
+        "jest-watch-typeahead/filename",
+        "jest-watch-typeahead/testname"
+    ]
+}
