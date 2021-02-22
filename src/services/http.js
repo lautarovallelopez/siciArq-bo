@@ -2,7 +2,7 @@
 
 export default class Http {
     static async get(url) {
-        const response = await fetch(`${ENDPOINT}${url}`, {
+        const response = await fetch(`${ENDPOINT}/${url}`, {
             credentials: 'same-origin',
             headers: {
                 referrer: ENDPOINT,

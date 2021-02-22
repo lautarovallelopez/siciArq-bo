@@ -18,7 +18,7 @@ module.exports = {
             'webpack/hot/only-dev-server',
             './src/app'
         ],
-        client: 'webpack-dev-server/client?http://localhost:2002'
+        client: 'webpack-dev-server/client?http://localhost:3001'
     },
     resolve: {
         modules: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')],
@@ -32,6 +32,7 @@ module.exports = {
             '@model': path.resolve(__dirname, 'src/model'),
             '@util': path.resolve(__dirname, 'src/util'),
             '@state': path.resolve(__dirname, 'src/state'),
+            '@reutilizables': path.resolve(__dirname, 'src/reutilizables'),
             '@root': __dirname
         }
     },

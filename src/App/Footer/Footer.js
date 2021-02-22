@@ -17,7 +17,7 @@ const Footer = ({user, role}) => (
             &nbsp;
             <span data-testid="versionNumber">{VERSION}</span>
             <br/>
-            <span data-testid="appName">ENUT</span>
+            <span data-testid="appName">SICI</span>
         </div>
         {user?.id && (
             <div className="d-inline">

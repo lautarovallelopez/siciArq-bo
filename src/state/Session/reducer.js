@@ -25,7 +25,7 @@ export default function session(
         case GET_SESSION_USER_SUCCESS:
             return {
                 ...state,
-                user: action.user,
+                user: new User(action.user),
                 roles: action.user.roles,
                 loading: false
             };
@@ -52,6 +52,6 @@ export default function session(
                 error: action.error
             };
         default:
-            return state;
+            return {...state};
     }
 }

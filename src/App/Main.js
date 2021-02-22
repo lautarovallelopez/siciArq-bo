@@ -12,7 +12,6 @@ const App = ({user}) => {
     return (
         <>
             <RouterWithSession user={user}/>
-            <ConfirmModal/>
         </>
     );
 };

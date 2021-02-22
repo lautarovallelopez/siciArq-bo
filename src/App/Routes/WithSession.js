@@ -10,6 +10,7 @@ import Assignments from '@components/Assignments';
 import FieldMaterials from '@components/FieldMaterials';
 import Logs from '@components/Logs';
 import Review from '@components/Review';
+import DiccionarioLinguistico from '@components/DiccionarioLinguistico';
 import roles from '@constants/roles';
 import routes from '@constants/routes';
 
@@ -41,6 +42,7 @@ const RouterWithSession = ({user: {roles: [role]}}) => (
                         {[roles.NATIONAL_COORDINATOR, roles.COORDINATOR, roles.SUB_COORDINATOR].includes(role) && (
                             <Route path={routes.ASSIGNMENTS} component={Assignments}/>
                         )}
+                        <Route path="/diccionario-linguistico" component={DiccionarioLinguistico} />
                         <Route component={Home}/>
                     </Switch>
                 </Container>

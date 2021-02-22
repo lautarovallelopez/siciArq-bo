@@ -12,10 +12,10 @@ describe('<Footer>', () => {
     });
     afterEach(tearDown);
 
-    it('should display `ENUT`', () => {
+    it('should display `SICI`', () => {
         const {container} = getComponent();
         const app = getByTestId(container, 'appName');
-        expect(getByText(app, 'ENUT')).toBeInTheDocument();
+        expect(getByText(app, 'SICI')).toBeInTheDocument();
     });
 
     it('should display `Version`', () => {

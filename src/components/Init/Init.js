@@ -5,17 +5,18 @@ import querystring from 'querystring';
 import {useLocation} from 'react-router-dom';
 import SessionService from '@services/session';
 import PackageJson from '@root/package.json';
-import Files from '../Files';
 import isEmpty from 'lodash/isEmpty';
 
-const Home = ({validateSession}) => {
+const Init = ({validateSession}) => {
     const location = useLocation();
 
     useEffect(() => {
         const queryParams = querystring.parse(location.search);
         const token = SessionService.getToken();
         const session = SessionService.getSession();
-        if((!token && !session) || !isEmpty(queryParams)){
+        if((token && session)){
+            window.location='https://www.google.com/'
+        }else{
             validateSession(queryParams);
         }
         
@@ -26,10 +27,10 @@ const Home = ({validateSession}) => {
             <Row>
                 <Col sm={12} className="text-center">
                     <h1 className="oswald title-home mt-5">
-                            &nbsp;Bienvenido al Sistema de Codificacion Informatizada&nbsp;
-                        { false && <span className="accent-color" data-testid="package-description">
+                            &nbsp;Bienvenido al Sistema&nbsp;
+                        <span className="accent-color" data-testid="package-description">
                             {PackageJson.description}
-                        </span>}
+                        </span>
                     </h1>
                 </Col>
             </Row>
@@ -42,8 +43,8 @@ const Home = ({validateSession}) => {
     );
 };
 
-Home.propTypes = {
+Init.propTypes = {
     validateSession: PropTypes.func.isRequired
 };
 
-export default Home;
+export default Init;
