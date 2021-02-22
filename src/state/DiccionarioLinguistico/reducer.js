@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import initialState from './initialState';
 import * as types from './types';
 
-export const diccionarioLinguistico = (state=initialState, action) => {
+export default (state=initialState, action) => {
     switch (action.type) {
         case types.FETCH_DICCIONARIOS_LINGUISTICOS_REQUESTED:
             return {
@@ -36,10 +36,3 @@ export const diccionarioLinguistico = (state=initialState, action) => {
     }
 };
 
-
-
-const diccionarioLinguisticoReducer = combineReducers({
-    diccionarioLinguistico
-});
-
-export default diccionarioLinguisticoReducer;

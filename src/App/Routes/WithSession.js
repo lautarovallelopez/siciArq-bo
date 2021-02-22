@@ -36,9 +36,7 @@ const RouterWithSession = ({user: {roles: [role]}}) => (
                             <Route path={routes.REVIEW} component={Review}/>
                         )}
                         <Route path={routes.LOGS} component={Logs}/>
-                        {[roles.NATIONAL_COORDINATOR, roles.COORDINATOR, roles.SUB_COORDINATOR].includes(role) && (
-                            <Route path={routes.MONITORING} render={() => <h2>Monitoreo</h2>}/>
-                        )}
+                        <Route path={routes.MONITORING} render={() => <h2>Monitoreo</h2>}/>
                         {[roles.NATIONAL_COORDINATOR, roles.COORDINATOR, roles.SUB_COORDINATOR].includes(role) && (
                             <Route path={routes.ASSIGNMENTS} component={Assignments}/>
                         )}

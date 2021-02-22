@@ -130,6 +130,9 @@ class Edit extends Component{
         this.props.update(diccionario);
         this.forceUpdate();
     }
+    handleClick(){
+        this.props.submit();
+    }
     render(){
         const {
             DESCRIPCION_DESTINO,
@@ -190,6 +193,7 @@ class Edit extends Component{
                                 selectedOne={ID_TIPOLOGIA_DE_DICCIONARIO}
                                 optionValue='id_tipologia_de_diccionario'
                                 optionLabel='descripcion'
+                                onChange={(e)=>this.handleChange(e)}
                             />
                         </Col>
                         <Col md={{ size: 4}}>
@@ -268,7 +272,10 @@ class Edit extends Component{
                             />
                         </Col>
                         <Col md='6'>
-                            <PrimaryButton label='GUARDAR'/>
+                            <PrimaryButton
+                                label='GUARDAR'
+                                onClick={()=>this.handleClick()}
+                            />
                         </Col>
                         
                     </Row>

@@ -28,6 +28,7 @@ class List extends Component{
             limit,
             page
         } = this.props;
+        console.log(diccionarios);
         return(
             <Container className="themed-container" fluid={true}>
                 <Row>

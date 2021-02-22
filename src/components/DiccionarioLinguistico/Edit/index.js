@@ -4,7 +4,8 @@ import get from 'lodash/get'
 import Component from './Component';
 import {
     fetchOneDiccionarioLinguisticoRequested,
-    updateDiccionarioLinguistico
+    updateDiccionarioLinguistico,
+    submitDiccionarioLinguisticoRequested
  } from '@state/DiccionarioLinguistico/actions'
 // Store Redux - StaticData
 const mapStateToProps = state => ({
@@ -13,7 +14,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     getOne: ids => dispatch(fetchOneDiccionarioLinguisticoRequested(ids)),
-    update: diccionario => dispatch(updateDiccionarioLinguistico(diccionario))
+    update: diccionario => dispatch(updateDiccionarioLinguistico(diccionario)),
+    submit: ()=>dispatch(submitDiccionarioLinguisticoRequested())
 });
 
 export default connect(
