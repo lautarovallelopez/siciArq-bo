@@ -8,7 +8,7 @@ class DiccionarioLinguistico {
         return Http.delete(`api/diccionarioLinguistico?${queryString.stringify(ids)}`);
     }
     static fetchOne({DESCRIPCION_ORIGINAL, ID_TIPOLOGIA_DE_DICCIONARIO, ID_VARIABLE}) {
-        return Http.get(`api/diccionarioLinguistico/${DESCRIPCION_ORIGINAL}/${ID_TIPOLOGIA_DE_DICCIONARIO}/${ID_VARIABLE}`);
+        return Http.get(`/api/diccionarioLinguistico/${DESCRIPCION_ORIGINAL}/${ID_TIPOLOGIA_DE_DICCIONARIO}/${ID_VARIABLE}`);
     }
     static submit(diccionario){
         if(diccionario.FECHA_ALTA){

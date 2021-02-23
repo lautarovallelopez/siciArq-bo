@@ -4,7 +4,7 @@ import * as types from './types';
 
 export default (state=initialState, action) => {
     switch (action.type) {
-        case types.FETCH_DICCIONARIOS_LINGUISTICOS_REQUESTED:
+        case types.FETCH_DICCIONARIOS_LINGUISTICOS_REQUESTED:    
             return {
                 ...state,
                 page: action.page

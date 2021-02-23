@@ -1,6 +1,8 @@
 export default {
     diccionarios : [],
-    diccionarioActual : {},
+    diccionarioActual : {
+        ID_USUARIO_ALTA:1
+    },
     page: 1,
     total: 0,
     limit: 20,
@@ -20,7 +22,7 @@ export default {
         'OBSERVACION',
         'DOMINIO',
         'SUPERVISADO',
-        'ID_USUARIO',
+        'ID_USUARIO_ALTA',
         'FECHA_ALTA'
     ]
 }
