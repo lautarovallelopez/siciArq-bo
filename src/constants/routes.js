@@ -25,7 +25,16 @@ const reviewRoutes = {
     REVIEW_OVERVIEW: `${review}:id`
 };
 
+const diccionarioLinguisticoRoute = '/diccionario-linguistico';
+const diccionarioLinguistico = {
+    INDEX: diccionarioLinguisticoRoute,
+    FETCH_ONE: `${diccionarioLinguisticoRoute}/:DESCRIPCION_ORIGINAL/:ID_TIPOLOGIA_DE_DICCIONARIO/:ID_VARIABLE`,
+    INDEX_WITH_PAGE: `${diccionarioLinguisticoRoute}/:page`,
+    NEW: `${diccionarioLinguisticoRoute}/new`
+};
+
 const routes = {
+    diccionarioLinguistico,
     ...fieldMaterialsRoutes,
     ...reviewRoutes,
     ...usersRoutes,

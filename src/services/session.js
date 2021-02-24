@@ -9,7 +9,8 @@ const SESSION = 'session';
 
 export default class SessionService {
     static signOut() {
-        window.localStorage.removeItem('id_token');
+        window.localStorage.removeItem(TOKEN_KEY);
+        window.localStorage.removeItem(SESSION);
         window.location = AUTH_LOGIN;
     }
 

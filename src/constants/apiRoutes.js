@@ -76,8 +76,15 @@ const logs = 'api/logs/';
 const logsRoutes = {
     logs
 };
+const diccionarioLinguisticoRoute = '/api/diccionarioLinguistico';
+
+const diccionarioLinguistico = {
+    DELETE_ONE: `${diccionarioLinguisticoRoute}/:DESCRIPCION_ORIGINAL/:ID_TIPOLOGIA_DE_DICCIONARIO/:ID_VARIABLE`
+};
+
 
 const apiRoutes = {
+    diccionarioLinguistico,
     ...assignmentsRoutes,
     ...fieldMaterialsRoutes,
     ...staticDataRoutes,

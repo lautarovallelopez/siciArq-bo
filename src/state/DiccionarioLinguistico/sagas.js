@@ -21,9 +21,9 @@ function* fetchDiccionariosLinguisticos({page}) {
     yield put(fetchDiccionariosLinguisticosSucceeded(result));
 }
 
-function* deleteDiccionarioLinguistico({ids}){
+function* deleteDiccionarioLinguistico({diccionario}){
     const {page} = yield select(state=>state.diccionarioLinguistico);
-    const result = yield call(DiccionarioLinguisticoService.delete, ids);
+    const result = yield call(DiccionarioLinguisticoService.delete, diccionario);
     yield put(deleteDiccionarioLinguisticoSucceeded(result))
     yield put(fetchDiccionariosLinguisticosRequested(page));
 }

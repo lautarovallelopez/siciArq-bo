@@ -25,9 +25,7 @@ const RouterWithSession = ({user: {roles: [role]}}) => (
             <main className="mt-20">
                 <Container fluid>
                     <Switch>
-                        {[roles.NATIONAL_COORDINATOR, roles.COORDINATOR, roles.SUB_COORDINATOR].includes(role) && (
-                            <Route path={routes.USERS} component={Users}/>
-                        )}
+                        <Route path={routes.USERS} component={Users}/>
                         <Route path={routes.ACCOUNT} component={Account}/>
                         {[roles.NATIONAL_COORDINATOR, roles.COORDINATOR, roles.SUB_COORDINATOR].includes(role) && (
                             <Route path={routes.FIELD_MATERIALS} component={FieldMaterials}/>

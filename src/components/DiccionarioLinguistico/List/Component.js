@@ -1,12 +1,11 @@
 import { withRouter } from 'react-router-dom';
 import React, {Component} from 'react';
 import {Container, Row, Col, Button} from 'reactstrap';
-
-import {Title, Table, Loading, PrimaryButton, Paginator} from '@reutilizables';
+import {Title, Loading, PrimaryButton, Paginator} from '@reutilizables';
+import {Table} from '@components/common';
 import {isEmpty} from 'lodash';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import Edit from '../Edit/Component';
 class List extends Component{
     componentDidMount(){
         const {page} = this.props.match.params;
@@ -28,7 +27,6 @@ class List extends Component{
             limit,
             page
         } = this.props;
-        console.log(diccionarios);
         return(
             <Container className="themed-container" fluid={true}>
                 <Row>
@@ -51,6 +49,13 @@ class List extends Component{
                             <Loading />
                             :
                             <Table
+                                headers = {tableHeaders}
+                                rows = {diccionarios}
+                                information = {formHeaders}
+                                route='diccionarioLinguistico'
+                                deleteFunction = {this.props.deleteDiccionario}
+                            />
+                            /*<Table
                                 rows = {diccionarios}
                                 headers = {tableHeaders}
                                 information = {formHeaders}
@@ -64,14 +69,14 @@ class List extends Component{
                                         attributes : ['DESCRIPCION_ORIGINAL', 'ID_TIPOLOGIA_DE_DICCIONARIO', 'ID_VARIABLE']
                                     }
                                 }}
-                            />
+                            />*/
                         }
                     </Col>
 
                 </Row>
                 <Row>
                     <Col md={{ size: 3, offset:4}}>
-                        {!isEmpty(diccionarios) && 
+                        {!isEmpty(diccionarios) &&
                             <Paginator
                                 total={total}
                                 limit={limit}

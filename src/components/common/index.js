@@ -20,7 +20,7 @@ import SegmentDropdown from './SegmentDropdown';
 import Pagination from './Pagination';
 import Title from './Title';
 import Address from './Address';
-
+import Table from './Table';
 export {Role};
 export {Dropdown};
 export {StateDropdown};
@@ -43,3 +43,4 @@ export {SegmentDropdown};
 export {Pagination};
 export {Title};
 export {Address};
+export {Table};

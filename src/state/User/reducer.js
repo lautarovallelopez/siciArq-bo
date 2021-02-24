@@ -21,7 +21,47 @@ import roles from '@constants/roles';
 
 export default (state = {
     currentUser: new User(),
-    users: undefined,
+    users: [
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "username": "string",
+            "name": "string",
+            "surname": "string",
+            "documentId": "string",
+            "email": "user@example.com",
+            "deleted": false,
+            "role": [
+                "string"
+            ],
+            "attributes": {}
+        },
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "username": "string",
+            "name": "string",
+            "surname": "string",
+            "documentId": "string",
+            "email": "user@example.com",
+            "deleted": true,
+            "role": [
+                "string"
+            ],
+            "attributes": {}
+        },
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "username": "string",
+            "name": "string",
+            "surname": "string",
+            "documentId": "string",
+            "email": "user@example.com",
+            "deleted": true,
+            "role": [
+                "string"
+            ],
+            "attributes": {}
+        }
+    ],
     total: 0,
     page: 0,
     teamLeaders: [],
@@ -49,7 +89,7 @@ export default (state = {
             return {...state, loading: false, error: action.error};
         case GET_USERS_REQUEST:
             return {
-                ...state, page: 0, total: 0, users: undefined, loading: true
+                ...state, page: 0, total: 0, loading: true
             };
         case GET_USERS_SUCCESS:
             return {
