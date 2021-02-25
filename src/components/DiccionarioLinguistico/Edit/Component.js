@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form, Col, Row} from 'reactstrap';
+import {Form, Col, Row, Container} from 'reactstrap';
 import find from 'lodash/find';
 import {
     RegularInput,
@@ -15,7 +15,6 @@ import {
     faFileDownload
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import Container from 'reactstrap/lib/Container';
 const variablesEstadisticas = [
     {
         "ID_VARIABLE":"100  ",
@@ -116,12 +115,7 @@ const variablesEstadisticas = [
 class Edit extends Component{
     componentDidMount(){
         const {DESCRIPCION_ORIGINAL, ID_TIPOLOGIA_DE_DICCIONARIO, ID_VARIABLE} = this.props.match.params;
-        if(DESCRIPCION_ORIGINAL && ID_TIPOLOGIA_DE_DICCIONARIO && ID_VARIABLE){
-            this.props.getOne({DESCRIPCION_ORIGINAL, ID_TIPOLOGIA_DE_DICCIONARIO, ID_VARIABLE})
-        }
-    }
-    componentWillUnmount(){
-        this.props.update({});
+        this.props.getOne({DESCRIPCION_ORIGINAL, ID_TIPOLOGIA_DE_DICCIONARIO, ID_VARIABLE})
     }
     handleChange(e){
         const changes = {[e.target.id]: e.target.value}

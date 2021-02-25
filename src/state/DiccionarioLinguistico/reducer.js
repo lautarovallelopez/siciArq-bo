@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import copyObject from '@util/copyObject';
 import initialState from './initialState';
 import * as types from './types';
 
@@ -27,9 +27,17 @@ export default (state=initialState, action) => {
                 diccionarioActual : initialState.diccionarioActual
             };
         case types.FETCH_ONE_DICCIONARIO_LINGUISTICO_SUCCEEDED:
+            console.log(action.diccionario);
             return {
                 ...state,
-                diccionarioActual : action.diccionario
+                diccionarioActual : action.diccionario,
+                diccionarioOriginal : copyObject(action.diccionario)
+            }
+        case types.RESTORE_ONE_DICCIONARIO:
+            return {
+                ...state,
+                diccionarioActual : initialState.diccionarioActual,
+                diccionarioOriginal : initialState.diccionarioOriginal 
             }
         default:
             return {...state};

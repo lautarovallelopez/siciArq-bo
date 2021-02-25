@@ -11,16 +11,13 @@ class DiccionarioLinguistico {
     static fetchOne({DESCRIPCION_ORIGINAL, ID_TIPOLOGIA_DE_DICCIONARIO, ID_VARIABLE}) {
         return Http.get(`/api/diccionarioLinguistico/${DESCRIPCION_ORIGINAL}/${ID_TIPOLOGIA_DE_DICCIONARIO}/${ID_VARIABLE}`);
     }
-    static submit(diccionario){
-        if(diccionario.FECHA_ALTA){
-            delete diccionario.FECHA_ALTA;
-            return Http.put(`/api/diccionarioLinguistico?${queryString.stringify({
-                DESCRIPCION_ORIGINAL:diccionario.DESCRIPCION_ORIGINAL,
-                ID_TIPOLOGIA_DE_DICCIONARIO: diccionario.ID_TIPOLOGIA_DE_DICCIONARIO,
-                ID_VARIABLE: diccionario.ID_VARIABLE
-            })}`, diccionario);
+    static submit(diccionarioActual, diccionarioOrignal){
+        
+        if(diccionarioActual.FECHA_ALTA){
+            const {FECHA_ALTA, ...diccionario} = diccionarioActual;
+            return Http.put(transformRoute(API.diccionarioLinguistico.DELETE_ONE, diccionarioOrignal), diccionario);
         }else{
-            return Http.post(`/api/diccionarioLinguistico`, diccionario);
+            return Http.post(`/api/diccionarioLinguistico`, diccionarioActual);
         }
     }
 }

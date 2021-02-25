@@ -1,7 +1,25 @@
 export default {
     diccionarios : [],
     diccionarioActual : {
-        ID_USUARIO_ALTA:1
+        DESCRIPCION_DESTINO: '',
+        DESCRIPCION_ORIGINAL: '',
+        DOMINIO: '',
+        FECHA_ALTA: null,
+        ID_TIPOLOGIA_DE_DICCIONARIO: '',
+        ID_USUARIO_ALTA: 1,
+        ID_VARIABLE: '',
+        OBSERVACION: '',
+        SUPERVISADO: ''
+    },
+    diccionarioOriginal: {
+        DESCRIPCION_DESTINO: '',
+        DESCRIPCION_ORIGINAL: '',
+        DOMINIO: '',
+        ID_TIPOLOGIA_DE_DICCIONARIO: '',
+        ID_USUARIO_ALTA: 1,
+        ID_VARIABLE: '',
+        OBSERVACION: '',
+        SUPERVISADO: ''
     },
     page: 1,
     total: 0,

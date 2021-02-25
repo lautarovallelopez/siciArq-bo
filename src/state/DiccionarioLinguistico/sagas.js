@@ -33,9 +33,10 @@ function* fetchOneDiccionario({ids}){
     yield put(fetchOneDiccionarioLinguisticoSucceeded(diccionario));
 }
 function* submitDiccionarioLinguistico(){
-    const {diccionarioActual} = yield select(state=>state.diccionarioLinguistico);
-    const response = yield call(DiccionarioLinguisticoService.submit, diccionarioActual);
+    const {diccionarioActual, diccionarioOriginal} = yield select(state=>state.diccionarioLinguistico);
+    const response = yield call(DiccionarioLinguisticoService.submit, diccionarioActual, diccionarioOriginal);
     yield put(submitDiccionarioLinguisticoSucceeded(response));
+    yield window.history.back();
 }
 
 function* diccionarioLinguistico() {
