@@ -7,6 +7,7 @@ import { getIsValidate, getIsValidating } from 'store/session/selectors';
 
 const Home = lazy(() => import('pages/home'));
 const AnotherPage = lazy(() => import('pages/another-page'));
+const DiccionarioLinguistico = lazy(() => import('pages/diccionario-linguistico'));
 const Profile = lazy(() => import('pages/profile'));
 
 const SessionRouter = () => {
@@ -32,6 +33,7 @@ const SessionRouter = () => {
           <Switch>
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/anotherPage" component={AnotherPage} />
+            <Route exact path="/diccionario-linguistico" component={DiccionarioLinguistico} />
             <Route component={Home} />
           </Switch>
         </Suspense>
