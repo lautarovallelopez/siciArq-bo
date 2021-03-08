@@ -7,5 +7,5 @@ export default history =>
   combineReducers({
     router: connectRouter(history),
     session,
-    diccionarioLinguistico
+    diccionarioLinguistico,
   });

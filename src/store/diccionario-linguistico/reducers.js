@@ -4,17 +4,20 @@ import { initialState } from 'store/diccionario-linguistico/initial-state';
 
 const diccionarioLinguisticoFetchRequest = state => ({
   ...state,
-  diccionarios: initialState.diccionarios
+  diccionarios: initialState.diccionarios,
 });
 
 const diccionarioLinguisticoFetchSuccess = (state, { diccionarios }) => ({
   ...state,
-  diccionarios
+  diccionarios,
 });
-
+console.log({
+  [diccionarioLinguisticoTypes.DICCIONARIO_LINGUISTICO_FETCH_REQUEST]: diccionarioLinguisticoFetchRequest,
+  [diccionarioLinguisticoTypes.DICCIONARIO_LINGUISTICO_FETCH_SUCCESS]: diccionarioLinguisticoFetchSuccess,
+});
 const reducer = createReducer(initialState, {
   [diccionarioLinguisticoTypes.DICCIONARIO_LINGUISTICO_FETCH_REQUEST]: diccionarioLinguisticoFetchRequest,
-  [diccionarioLinguisticoTypes.DICCIONARIO_LINGUISTICO_FETCH_SUCCESS]: diccionarioLinguisticoFetchSuccess
+  [diccionarioLinguisticoTypes.DICCIONARIO_LINGUISTICO_FETCH_SUCCESS]: diccionarioLinguisticoFetchSuccess,
 });
 
 export default reducer;
